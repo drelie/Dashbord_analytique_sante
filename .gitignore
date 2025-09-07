@@ -1,0 +1,39 @@
+# Dossiers et fichiers générés par Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Dossier de l'environnement virtuel
+.venv/
+venv/
+
+# Fichiers de configuration de l'environnement
+.env
+.env.local
+
+# Fichiers de cache et temporaires
+.cache/
+temp/
+
+# Fichiers générés par le script
+cache_dir/
+results/
+data/
+
+# Fichiers générés par Jupyter/notebooks
+.ipynb_checkpoints/
+
+# Fichiers binaires
+*.pkl
+*.xlsx
+*.csv
+
+# Fichiers spécifiques aux éditeurs et OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

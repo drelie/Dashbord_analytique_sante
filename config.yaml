@@ -1,0 +1,59 @@
+# Configuration pour AnalytiqueSanteOptimisee
+# Fichier de configuration centralisé pour tous les paramètres du système
+
+models:
+  prophet:
+    yearly_seasonality: true
+    weekly_seasonality: false
+    daily_seasonality: false
+    changepoint_prior_scale: 0.05
+    seasonality_mode: "multiplicative"
+    seasonality_prior_scale: 10.0
+    
+  arima:
+    order: [1, 1, 1]
+    seasonal_order: [1, 1, 1, 12]
+    enforce_stationarity: true
+    enforce_invertibility: true
+    
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 5
+    min_samples_leaf: 2
+    random_state: 42
+    n_jobs: -1
+    bootstrap: true
+    oob_score: true
+
+validation:
+  cv_folds: 3
+  min_data_points: 6
+  test_size: 0.2
+  adf_significance_level: 0.05
+  
+performance:
+  max_workers: 4
+  cache_enabled: true
+  memory_limit_mb: 1000
+  cache_max_size: 100
+  cache_ttl_hours: 24
+  
+data_processing:
+  min_consultations_threshold: 10
+  outlier_detection_enabled: true
+  outlier_threshold: 3.0  # Nombre d'écarts-types
+  missing_data_strategy: "interpolate"  # "interpolate", "forward_fill", "drop"
+  
+alerting:
+  growth_threshold_percent: 20.0
+  r2_threshold: 0.3
+  mape_threshold: 15.0
+  stationarity_required: false
+  
+output:
+  excel_format: "xlsx"
+  include_performance_metrics: true
+  include_validation_results: true
+  include_confidence_intervals: true
+  decimal_places: 2
