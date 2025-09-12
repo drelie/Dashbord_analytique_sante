@@ -62,8 +62,8 @@ Project_complete/
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/drelie/Optimisation_Ressources_Sante.git
-cd Optimisation_Ressources_Sante/Project_complete
+git clone https://github.com/drelie/Dashbord_analytique_sante.git
+cd Dashbord_analytique_sante/Project_complete
 
 # Créer un environnement virtuel
 python -m venv .venv
